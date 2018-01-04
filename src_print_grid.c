@@ -6,7 +6,7 @@
 /*   By: pde-rent <pde-rent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 14:17:54 by pde-rent          #+#    #+#             */
-/*   Updated: 2018/01/04 14:49:50 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/04 18:26:29 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ void			print_grid(unsigned __int128 *blocks, size_t grid_size,
 	char		*str;
 
 	i = -1;
-	str = (char *)malloc(sizeof(char) * (grid_size * grid_size + 1));
+	if ((str = (char *)malloc(sizeof(char) * (grid_size * grid_size + 1))) == 0)
+		return ;
 	str = ft_memset(str, '.', grid_size * grid_size);
 	while (++i < (int)nb_blocks)
 	{
