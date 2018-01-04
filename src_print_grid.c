@@ -6,7 +6,7 @@
 /*   By: pde-rent <pde-rent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 14:17:54 by pde-rent          #+#    #+#             */
-/*   Updated: 2018/01/04 18:31:09 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/04 18:32:18 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ static	void	outp(char *str, size_t grid_size)
 }
 
 void			print_grid(unsigned __int128 *blocks, size_t grid_size,
-		size_t nb_blocks)
+				size_t nb_blocks)
 {
 	int					i;
 	int					j;
-	unsigned __int128	x;
 	char				*str;
+	unsigned __int128	x;
 
 	i = -1;
 	if (!(str = (char *)malloc(sizeof(char) * (grid_size * grid_size + 1))))
