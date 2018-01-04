@@ -6,7 +6,7 @@
 /*   By: pde-rent <pde-rent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 14:17:54 by pde-rent          #+#    #+#             */
-/*   Updated: 2018/01/04 18:28:08 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/04 18:30:04 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 static	void	outp(char *str, size_t grid_size)
 {
-	size_t	i;
+	int			i;
 
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
 		if ((i % grid_size) == 0 && i != 0)
 			ft_putchar('\n');
 		ft_putchar(str[i]);
-		i++;
 	}
 	ft_putchar('\n');
 }
