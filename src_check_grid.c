@@ -6,7 +6,7 @@
 /*   By: pde-rent <pde-rent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 14:16:41 by pde-rent          #+#    #+#             */
-/*   Updated: 2018/01/04 14:52:27 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/05 13:46:11 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ static	char	**input_reader(char *file, int hypo_blocks)
 
 static	int		block_check(char *str)
 {
-	int i;
-	int hashtag;
-	int point;
-	int endl;
+	int		i;
+	int		hashtag;
+	int		point;
+	int		endl;
 
 	i = -1;
 	hashtag = 0;

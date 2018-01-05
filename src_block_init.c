@@ -6,7 +6,7 @@
 /*   By: pde-rent <pde-rent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 14:14:38 by pde-rent          #+#    #+#             */
-/*   Updated: 2018/01/04 14:51:30 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/05 13:45:51 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,37 +39,37 @@ int					get_blocks(char *file)
 	return (j / 5);
 }
 
-static	int			is_free_col(unsigned __int128 block, size_t grid_size)
+static	int			is_free_col(__uint128 block, size_t grid_size)
 {
-	unsigned __int128	mask;
+	__uint128	mask;
 	size_t		i;
 
 	i = 1;
 	mask = 0;
 	while (i <= (grid_size * grid_size))
 	{
-		mask |= ((unsigned __int128)1 << (128 - i));
+		mask |= ((__uint128)1 << (128 - i));
 		i += grid_size;
 	}
 	return ((block & mask) ? 0 : 1);
 }
 
-static	int			is_free_row(unsigned __int128 block, size_t grid_size)
+static	int			is_free_row(__uint128 block, size_t grid_size)
 {
-	unsigned __int128	mask;
+	__uint128	mask;
 	size_t		i;
 
 	i = 0;
 	mask = 0;
 	while (i < grid_size)
 	{
-		mask |= ((unsigned __int128)1 << (127 - i));
+		mask |= ((__uint128)1 << (127 - i));
 		i++;
 	}
 	return ((block & mask) ? 0 : 1);
 }
 
-unsigned __int128			block_init(unsigned __int128 block, size_t grid_size)
+__uint128			block_init(__uint128 block, size_t grid_size)
 {
 	while (is_free_row(block, grid_size))
 		block = block << grid_size;

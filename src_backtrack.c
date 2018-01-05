@@ -6,13 +6,13 @@
 /*   By: cormarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 00:39:25 by cormarti          #+#    #+#             */
-/*   Updated: 2018/01/04 18:33:46 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/05 13:45:41 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		grid_insert(unsigned __int128 *tab, unsigned __int128 *grid,
+int		grid_insert(__uint128 *tab, __uint128 *grid,
 		int grid_size, int len)
 {
 	int		i;

@@ -6,15 +6,15 @@
 /*   By: pde-rent <pde-rent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 14:19:12 by pde-rent          #+#    #+#             */
-/*   Updated: 2018/01/04 18:34:47 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/05 13:46:24 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static	unsigned __int128	ft_pow(int x, unsigned int y)
+static	__uint128	ft_pow(int x, unsigned int y)
 {
-	unsigned __int128	tmp;
+	__uint128	tmp;
 
 	if (y == 0)
 		return (1);
@@ -24,7 +24,7 @@ static	unsigned __int128	ft_pow(int x, unsigned int y)
 	return (x * tmp * tmp);
 }
 
-unsigned __int128			*txt_to_tab(char *filename, unsigned __int128 *tab, int grid_size,
+__uint128			*txt_to_tab(char *filename, __uint128 *tab, int grid_size,
 							int nb_blocks)
 {
 	int		cnt[3];
@@ -42,7 +42,7 @@ unsigned __int128			*txt_to_tab(char *filename, unsigned __int128 *tab, int grid
 		buf[handle] = '\0';
 		while (buf[++cnt[0]])
 			if (buf[cnt[0]] == '#')
-				tab[cnt[1]] += (unsigned __int128)ft_pow(2, 127 - cnt[0] + cnt[2]);
+				tab[cnt[1]] += (__uint128)ft_pow(2, 127 - cnt[0] + cnt[2]);
 			else if (buf[cnt[0]] == '\n')
 				cnt[2] += (5 - grid_size);
 		cnt[1]++;

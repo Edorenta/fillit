@@ -6,7 +6,7 @@
 /*   By: pde-rent <pde-rent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 14:03:18 by pde-rent          #+#    #+#             */
-/*   Updated: 2018/01/04 14:06:46 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/05 13:44:18 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include "libft/libft.h"
+
+typedef	unsigned __int128 __uint128;
 
 int					get_blocks(char *file);
 int					is_input_valid(char *str);

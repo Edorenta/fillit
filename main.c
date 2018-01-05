@@ -6,7 +6,7 @@
 /*   By: cormarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 21:45:43 by cormarti          #+#    #+#             */
-/*   Updated: 2018/01/04 14:41:52 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/01/05 13:45:35 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ static	int		gridsize(int nb_blocks)
 
 int				main(int ac, char **av)
 {
-	unsigned __int128			*tab;
-	unsigned __int128			bit_grid;
+	__uint128			*tab;
+	__uint128			bit_grid;
 	int					nb_blocks;
 	int					grid_size;
 
@@ -39,7 +39,7 @@ int				main(int ac, char **av)
 		return (put_err(0));
 	grid_size = gridsize(nb_blocks);
 	bit_grid = 0;
-	if (!(tab = (unsigned __int128 *)malloc(sizeof(tab[0]) * nb_blocks)))
+	if (!(tab = (__uint128 *)malloc(sizeof(tab[0]) * nb_blocks)))
 		return (put_err(0));
 	tab = txt_to_tab(av[1], tab, grid_size, nb_blocks);
 	while (!(grid_insert(tab, &bit_grid, grid_size, nb_blocks)))
