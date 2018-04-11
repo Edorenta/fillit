@@ -1,2 +1,2 @@
-![alt text](https://github.com/Edorenta/fillit/git/demo.gif)
+![alt text](https://github.com/Edorenta/fillit/blob/master/git/demo.gif)
 
